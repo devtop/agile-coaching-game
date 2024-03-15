@@ -1,6 +1,0 @@
-method1
-Method 2
-method3
-method4
-
-Hello! This is a testtext.
