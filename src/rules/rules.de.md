@@ -29,10 +29,9 @@ Deckt dazu als nächstes zwei Missionskarten auf. Lest auch diese Karten vor. W�
 Wiederholt den Wahlvorgang mit zwei aufgedeckten Methodenkarten. Es ist die Methodenkarte zu wählen, die am Besten zum Set aus Organisations-, Auswahl- und Missionskarte passt.
 Beendet Eure Unternehmenswahl mit einem Wahlvorgang zwischen zwei Kulturkarten. Es gelten die Wahlregeln entsprechend der Missionskarten. Es ist diejenige Karte zu wählen, die stimmig zu der Organisations-, Auswahl-, Missions- und Methodenkarte passt.
 III.2.  Unternehmen beschreiben
-Ihr habt nun ein Unternehmen zusammengestellt. Erzählt Euch gegenseitig, wie es genau in diesem Unternehmen aussieht.1) Was sind typische Sprüche?1) Was sind typische Sprüche?
-2) 2. Wie handeln die Mitarbeiter und Mitarbeiterinnen häufig?
-3) 3. Was wäre ein totaler Bruch der Unternehmenskultur?
-      Notiert auf dem DinA4-Bogen in der Mitte des Spieltisches Eure Anmerkungen. Dies dient Eurer Erinnerung für die nachfolgenden Ereignisse.
+Ihr habt nun ein Unternehmen zusammengestellt. Erzählt Euch gegenseitig, wie es genau in diesem Unternehmen aussieht.1) Was sind typische Sprüche?1) Was sind typische Sprüche?1. Was sind typische Sprüche?
+2. 2. Wie handeln die Mitarbeiter und Mitarbeiterinnen häufig?3) 3) 3) Was wäre ein totaler Bruch der Unternehmenskultur?
+         Notiert auf dem DinA4-Bogen in der Mitte des Spieltisches Eure Anmerkungen. Dies dient Eurer Erinnerung für die nachfolgenden Ereignisse.
 
 IV.  Auf Ereignisse reagieren
 Ihr spielt insgesamt fünf Ereignisse im Unternehmen durch.
@@ -50,6 +49,7 @@ Die dienstälteste Spielgruppe (im Mittel) stellt ihren größten Hebel als Erst
 
 Nachdem alle Handlungsoptionen vorgestellt wurden, bewertet Ihr diese nach folgendem Muster:
 1\. Ihr stellt Eure Rakete auf die Handlungsoption, die Ihr für den größten Hebel als Antwort auf das Ereignis haltet.\
+2.\
 2.\
 2\. Ihr stellt den Fisch auf die Handlungsoption, die Euch am meisten an ein Vorgehen erinnert, welches Ihr schon einmal erlebt habt.
 Alle Spielgruppen notieren die Anzahl der erhaltenen Spielsteine auf Ihrem Spielblock.
@@ -73,6 +73,8 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 VI.2.  Under the following terms:
 1\. Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\
 2.\
-2\. ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\
+2.\
+2\) 2. ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\
 3.\
-3\. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+3.\
+3\) 3. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
