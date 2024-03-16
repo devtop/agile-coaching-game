@@ -1,5 +1,10 @@
 files:
-  - source: '*'
+  - source: /src/cards
+    ignore:
+      - '*.de.*'
+      - '*.en.*'
+    translation: /%original_path%/%file_name%.%two_letters_code%.%file_extension%
+  - source: /src/rules
     ignore:
       - '*.de.*'
       - '*.en.*'
