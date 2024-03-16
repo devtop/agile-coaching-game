@@ -3,9 +3,13 @@ files:
     ignore:
       - '*.de.*'
       - '*.en.*'
+      - '*.png'
+      - '*.xcf'
     translation: /%original_path%/%file_name%.%two_letters_code%.%file_extension%
   - source: /src/rules
     ignore:
       - '*.de.*'
       - '*.en.*'
+      - '*.png'
+      - '*.xcf'
     translation: /%original_path%/%file_name%.%two_letters_code%.%file_extension%
