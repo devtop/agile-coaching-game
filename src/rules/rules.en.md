@@ -29,10 +29,10 @@ Next, reveal two mission cards. Also read these cards aloud. Now use your round 
 Repeat the voting process with two face-up method cards. Choose the method card that best matches the set of organization, selection and mission cards.
 End your company selection with a choice between two culture cards. The voting rules according to the mission cards apply. Choose the card that matches the organization, selection, mission and method cards.
 III.2.  Describe the company
-You have now put together a company. Tell each other exactly what it's like in this company.1) What are typical sayings?
-2) How do employees often act?
-3) What would be a total break with the corporate culture?
-   Note your comments on the A4 sheet in the middle of the game table. This will serve as a reminder for subsequent events.
+You have now put together a company. Tell each other exactly what it's like in this company.1) What are typical sayings?1) What are typical sayings?
+2) 2. How do employees often act?
+3) 3. What would be a total break with the corporate culture?
+      Note your comments on the A4 sheet in the middle of the game table. This will serve as a reminder for subsequent events.
 
 IV.  Reacting to events
 You play through a total of five events in the company.
@@ -50,6 +50,7 @@ The longest-serving playing group (on average) is the first to present its bigge
 
 After all options for action have been presented, you evaluate them according to the following pattern:
 1\. You place your rocket on the action option that you consider to have the greatest leverage in response to the event.\
+2.\
 2\. You place the fish on the action option that most reminds you of an action you have already experienced.
 All game groups note the number of pieces they have received on their game pad.
 IV.4.  Explain ratings
@@ -71,5 +72,7 @@ VI.1.  You are free to:
 The licensor cannot revoke these freedoms as long as you follow the license terms.
 VI.2.  Under the following terms:
 1\. Attribution - You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\
+2.\
 2\. ShareAlike - If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\
+3.\
 3\. No additional restrictions - You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
