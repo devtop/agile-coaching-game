@@ -1,1 +1,0 @@
-Ihr seid agile*r Coach*in der Rolle
