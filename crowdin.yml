@@ -1,5 +1,5 @@
 files:
-  - source: '*'
+  - source: /src/
     ignore:
       - '*.de.*'
       - '*.en.*'
