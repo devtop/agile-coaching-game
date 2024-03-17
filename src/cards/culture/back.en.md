@@ -1,1 +1,1 @@
-Kultur
+Culture
