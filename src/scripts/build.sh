@@ -23,7 +23,6 @@ for LANGUAGE in "de" "en"; do
 
   echo "Starting $LANGUAGE events"
 
-
   for file in src/cards/event/[0-9][0-9].md; do
     filename=$(basename -- "$file")
     extension="${filename##*.}"
@@ -47,13 +46,42 @@ for LANGUAGE in "de" "en"; do
     -pointsize 40 -font "build/static/OpenSans-Regular.ttf" -draw "text 1020,100 '$cardnumber'" \
     -fill black -size 930x -pointsize $FONTSIZE caption:"$TEXT" -geometry +120+220\
     -composite "$BUILDPATH/$LANGUAGE/images/cards/event/$cardnumber.png"
+
   #  -fill black -size 910x pango:"<span font_family=\"Open Sans\" font=\"$FONTSIZE\">$TEXT</span>" -geometry +130+230 \
     #+antialias
   done
 
+  
+  mkdir -p "$BUILDPATH/$LANGUAGE/print/images/"
+
   magick "$SRCPATH/cards/event/back.png" \
   -pointsize 100 -fill "#ADADAD" -font "build/static/OpenSans-SemiBold.ttf" -draw "text 220,300 '$CATEGORY'" \
   "$BUILDPATH/$LANGUAGE/images/cards/event/back.png"
+ 
+  magick montage -page A4 -density 300 -gravity north-west \
+   "$BUILDPATH/$LANGUAGE/images/cards/event/"[0-9][0-9].png \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/event.jpg"
+ 
+  magick montage -page A4 -density 300 -gravity north-west \
+  "$BUILDPATH/$LANGUAGE/images/cards/event/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/event/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/event/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/event/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/event/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/event/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/event/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/event/back.png" \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/event_back.jpg"
+
+  FILES=$(ls "$BUILDPATH/$LANGUAGE/images/cards/event/"[0-9][0-9].png | wc -l)
+  (( SHEETS = FILES/8 ))
+  if [ $SHEETS -gt 1 ]; then
+    for (( i=1; i<=$SHEETS; i++ ))
+    do
+      cp "$BUILDPATH/$LANGUAGE/print/images/event_back.jpg" "$BUILDPATH/$LANGUAGE/print/images/event-$i""b.jpg"
+    done
+    rm "$BUILDPATH/$LANGUAGE/print/images/event_back.jpg"
+  fi
 
   # METHODS
   CATEGORY="$(cat "$SRCPATH/cards/method/back.$LANGUAGE.md")"
