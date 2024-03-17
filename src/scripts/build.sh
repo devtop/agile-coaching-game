@@ -141,11 +141,11 @@ mkdir -p "$BUILDPATH/$LANGUAGE/images/cards/organization"
 
 echo "Starting $LANGUAGE organization"
 
-for file in src/cards/method/[0-9][0-9].md; do
+for file in src/cards/organization/[0-9][0-9].md; do
   filename=$(basename -- "$file")
   extension="${filename##*.}"
   cardnumber="${filename%.*}"
-  #TEXT="$(cat "$SRCPATH/cards/event/$cardnumber.$LANGUAGE.md")"
+  #TEXT="$(cat "$SRCPATH/cards/organization/$cardnumber.$LANGUAGE.md")"
   TEXT="$(sed 's/&quot;/\"/g' < "$SRCPATH/cards/organization/$cardnumber.$LANGUAGE.md")"
   WC="$(wc -m < "$SRCPATH/cards/organization/$cardnumber.$LANGUAGE.md")"
   echo "$cardnumber: $WC"
@@ -174,3 +174,46 @@ done
 magick "$SRCPATH/cards/organization/back.png" \
  -pointsize 100 -fill white -font "build/static/OpenSans-SemiBold.ttf" -draw "text 220,300 '$CATEGORY'" \
  "$BUILDPATH/$LANGUAGE/images/cards/organization/back.png"
+
+
+# CULUTRE
+CATEGORY="$(cat "$SRCPATH/cards/culture/back.$LANGUAGE.md")"
+CATEGORY="${CATEGORY^^}"
+mkdir -p "$BUILDPATH/$LANGUAGE/images/cards/culture"
+
+echo "Starting $LANGUAGE culture"
+
+for file in src/cards/culture/[0-9][0-9].md; do
+  filename=$(basename -- "$file")
+  extension="${filename##*.}"
+  cardnumber="${filename%.*}"
+  #TEXT="$(cat "$SRCPATH/cards/culture/$cardnumber.$LANGUAGE.md")"
+  TEXT="$(sed 's/&quot;/\"/g' < "$SRCPATH/cards/culture/$cardnumber.$LANGUAGE.md")"
+  TEXT=$(sed 's|**||g' <<< $TEXT)
+  WC="$(wc -m < "$SRCPATH/cards/culture/$cardnumber.$LANGUAGE.md")"
+  echo "$cardnumber: $WC"
+  FONTSIZE=28
+
+  if [ $WC -gt 266 ]; then
+    FONTSIZE=24
+  fi
+  if [ $WC -gt 350 ]; then
+    FONTSIZE=22
+  fi
+  if [ $WC -gt 560 ]; then
+    FONTSIZE=20
+  fi
+
+  FONTSIZE=$(($FONTSIZE+8))
+  magick "$SRCPATH/cards/culture/front.png" \
+  -pointsize 50 -fill white -font "build/static/OpenSans-SemiBold.ttf" -draw "text 130,180 '$CATEGORY'" \
+  -pointsize 40 -font "build/static/OpenSans-Regular.ttf" -draw "text 1020,100 '$cardnumber'" \
+  -fill black -size 930x -pointsize $FONTSIZE caption:"$TEXT" -geometry +120+220\
+  -composite "$BUILDPATH/$LANGUAGE/images/cards/culture/$cardnumber.png"
+#  -fill black -size 910x pango:"<span font_family=\"Open Sans\" font=\"$FONTSIZE\">$TEXT</span>" -geometry +130+230 \
+   #+antialias
+done
+
+magick "$SRCPATH/cards/culture/back.png" \
+ -pointsize 100 -fill white -font "build/static/OpenSans-SemiBold.ttf" -draw "text 220,300 '$CATEGORY'" \
+ "$BUILDPATH/$LANGUAGE/images/cards/culture/back.png"
