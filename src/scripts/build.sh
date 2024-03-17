@@ -51,13 +51,12 @@ for LANGUAGE in "de" "en"; do
     #+antialias
   done
 
-  
-  mkdir -p "$BUILDPATH/$LANGUAGE/print/images/"
-
   magick "$SRCPATH/cards/event/back.png" \
   -pointsize 100 -fill "#ADADAD" -font "build/static/OpenSans-SemiBold.ttf" -draw "text 220,300 '$CATEGORY'" \
   "$BUILDPATH/$LANGUAGE/images/cards/event/back.png"
  
+  mkdir -p "$BUILDPATH/$LANGUAGE/print/images/"
+
   magick montage -page A4 -density 300 -gravity north-west \
    "$BUILDPATH/$LANGUAGE/images/cards/event/"[0-9][0-9].png \
   -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/event.jpg"
@@ -74,9 +73,9 @@ for LANGUAGE in "de" "en"; do
   -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/event_back.jpg"
 
   FILES=$(ls "$BUILDPATH/$LANGUAGE/images/cards/event/"[0-9][0-9].png | wc -l)
-  (( SHEETS = FILES/8 ))
+  (( SHEETS = (FILES+7)/8 ))
   if [ $SHEETS -gt 1 ]; then
-    for (( i=1; i<=$SHEETS; i++ ))
+    for (( i=0; i<$SHEETS; i++ ))
     do
       cp "$BUILDPATH/$LANGUAGE/print/images/event_back.jpg" "$BUILDPATH/$LANGUAGE/print/images/event-$i""b.jpg"
     done
@@ -121,6 +120,30 @@ for LANGUAGE in "de" "en"; do
   -pointsize 100 -fill white -font "build/static/OpenSans-SemiBold.ttf" -draw "text 220,300 '$CATEGORY'" \
   "$BUILDPATH/$LANGUAGE/images/cards/method/back.png"
 
+  magick montage -page A4 -density 300 -gravity north-west \
+   "$BUILDPATH/$LANGUAGE/images/cards/method/"[0-9][0-9].png \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/method.jpg"
+ 
+  magick montage -page A4 -density 300 -gravity north-west \
+  "$BUILDPATH/$LANGUAGE/images/cards/method/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/method/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/method/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/method/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/method/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/method/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/method/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/method/back.png" \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/method_back.jpg"
+
+  FILES=$(ls "$BUILDPATH/$LANGUAGE/images/cards/method/"[0-9][0-9].png | wc -l)
+  (( SHEETS = (FILES+7)/8 ))
+  if [ $SHEETS -gt 1 ]; then
+    for (( i=0; i<$SHEETS; i++ ))
+    do
+      cp "$BUILDPATH/$LANGUAGE/print/images/method_back.jpg" "$BUILDPATH/$LANGUAGE/print/images/method-$i""b.jpg"
+    done
+    rm "$BUILDPATH/$LANGUAGE/print/images/method_back.jpg"
+  fi
 
   # MISSION
   CATEGORY="$(cat "$SRCPATH/cards/mission/back.$LANGUAGE.md")"
@@ -160,6 +183,30 @@ for LANGUAGE in "de" "en"; do
   -pointsize 100 -fill white -font "build/static/OpenSans-SemiBold.ttf" -draw "text 220,300 '$CATEGORY'" \
   "$BUILDPATH/$LANGUAGE/images/cards/mission/back.png"
 
+  magick montage -page A4 -density 300 -gravity north-west \
+   "$BUILDPATH/$LANGUAGE/images/cards/mission/"[0-9][0-9].png \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/mission.jpg"
+ 
+  magick montage -page A4 -density 300 -gravity north-west \
+  "$BUILDPATH/$LANGUAGE/images/cards/mission/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/mission/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/mission/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/mission/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/mission/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/mission/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/mission/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/mission/back.png" \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/mission_back.jpg"
+
+  FILES=$(ls "$BUILDPATH/$LANGUAGE/images/cards/mission/"[0-9][0-9].png | wc -l)
+  (( SHEETS = (FILES+7)/8 ))
+  if [ $SHEETS -gt 1 ]; then
+    for (( i=0; i<$SHEETS; i++ ))
+    do
+      cp "$BUILDPATH/$LANGUAGE/print/images/mission_back.jpg" "$BUILDPATH/$LANGUAGE/print/images/mission-$i""b.jpg"
+    done
+    rm "$BUILDPATH/$LANGUAGE/print/images/mission_back.jpg"
+  fi
 
   # ORGANIZATION
   CATEGORY="$(cat "$SRCPATH/cards/organization/back.$LANGUAGE.md")"
@@ -202,6 +249,30 @@ for LANGUAGE in "de" "en"; do
   -pointsize 100 -fill white -font "build/static/OpenSans-SemiBold.ttf" -draw "text 220,300 '$CATEGORY'" \
   "$BUILDPATH/$LANGUAGE/images/cards/organization/back.png"
 
+  magick montage -page A4 -density 300 -gravity north-west \
+   "$BUILDPATH/$LANGUAGE/images/cards/organization/"[0-9][0-9].png \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/organization.jpg"
+ 
+  magick montage -page A4 -density 300 -gravity north-west \
+  "$BUILDPATH/$LANGUAGE/images/cards/organization/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/organization/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/organization/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/organization/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/organization/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/organization/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/organization/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/organization/back.png" \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/organization_back.jpg"
+
+  FILES=$(ls "$BUILDPATH/$LANGUAGE/images/cards/organization/"[0-9][0-9].png | wc -l)
+  (( SHEETS = (FILES+7)/8 ))
+  if [ $SHEETS -gt 1 ]; then
+    for (( i=0; i<$SHEETS; i++ ))
+    do
+      cp "$BUILDPATH/$LANGUAGE/print/images/organization_back.jpg" "$BUILDPATH/$LANGUAGE/print/images/organization-$i""b.jpg"
+    done
+    rm "$BUILDPATH/$LANGUAGE/print/images/organization_back.jpg"
+  fi
 
   # CULUTRE
   CATEGORY="$(cat "$SRCPATH/cards/culture/back.$LANGUAGE.md")"
@@ -216,7 +287,7 @@ for LANGUAGE in "de" "en"; do
     cardnumber="${filename%.*}"
     #TEXT="$(cat "$SRCPATH/cards/culture/$cardnumber.$LANGUAGE.md")"
     TEXT="$(sed 's/&quot;/\"/g' < "$SRCPATH/cards/culture/$cardnumber.$LANGUAGE.md")"
-    TEXT=$(sed 's|**||g' <<< $TEXT)
+    TEXT=$(sed 's|\*\*||g' <<< $TEXT)
     WC="$(wc -m < "$SRCPATH/cards/culture/$cardnumber.$LANGUAGE.md")"
     echo "$cardnumber: $WC"
     FONTSIZE=28
@@ -244,4 +315,30 @@ for LANGUAGE in "de" "en"; do
   magick "$SRCPATH/cards/culture/back.png" \
   -pointsize 100 -fill white -font "build/static/OpenSans-SemiBold.ttf" -draw "text 220,300 '$CATEGORY'" \
   "$BUILDPATH/$LANGUAGE/images/cards/culture/back.png"
+
+    magick montage -page A4 -density 300 -gravity north-west \
+   "$BUILDPATH/$LANGUAGE/images/cards/culture/"[0-9][0-9].png \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/culture.jpg"
+ 
+  magick montage -page A4 -density 300 -gravity north-west \
+  "$BUILDPATH/$LANGUAGE/images/cards/culture/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/culture/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/culture/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/culture/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/culture/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/culture/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/culture/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/culture/back.png" \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/culture_back.jpg"
+
+  FILES=$(ls "$BUILDPATH/$LANGUAGE/images/cards/culture/"[0-9][0-9].png | wc -l)
+  (( SHEETS = (FILES+7)/8 ))
+  if [ $SHEETS -gt 1 ]; then
+    for (( i=0; i<$SHEETS; i++ ))
+    do
+      cp "$BUILDPATH/$LANGUAGE/print/images/culture_back.jpg" "$BUILDPATH/$LANGUAGE/print/images/culture-$i""b.jpg"
+    done
+    rm "$BUILDPATH/$LANGUAGE/print/images/culture_back.jpg"
+  fi
+
 done
