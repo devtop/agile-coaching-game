@@ -50,8 +50,8 @@ Die dienstälteste Spielgruppe (im Mittel) stellt ihren größten Hebel als Erst
 Nachdem alle Handlungsoptionen vorgestellt wurden, bewertet Ihr diese nach folgendem Muster:
 1\. Ihr stellt Eure Rakete auf die Handlungsoption, die Ihr für den größten Hebel als Antwort auf das Ereignis haltet.\
 2.\
-2.\
-2\. Ihr stellt den Fisch auf die Handlungsoption, die Euch am meisten an ein Vorgehen erinnert, welches Ihr schon einmal erlebt habt.
+2\.\
+2. Ihr stellt den Fisch auf die Handlungsoption, die Euch am meisten an ein Vorgehen erinnert, welches Ihr schon einmal erlebt habt.
 Alle Spielgruppen notieren die Anzahl der erhaltenen Spielsteine auf Ihrem Spielblock.
 IV.4.  Bewertungen erläutern
 Ihr erklärt Euch gegenseitig, warum Ihr die Bewertungen (Rakete, Fisch) vorgenommen habt.
@@ -73,8 +73,8 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 VI.2.  Under the following terms:
 1\. Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\
 2.\
-2.\
+2\.\
 2\) 2. ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\
 3.\
-3.\
+3\.\
 3\) 3. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
