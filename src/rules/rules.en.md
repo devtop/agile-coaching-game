@@ -51,7 +51,7 @@ The longest-serving playing group (on average) is the first to present its bigge
 After all options for action have been presented, you evaluate them according to the following pattern:
 1\. You place your rocket on the action option that you consider to have the greatest leverage in response to the event.\
 2.\
-2.\
+2\.\
 You read the part out loud. You place the fish on the action option that most reminds you of an action you have already experienced.
 All game groups note the number of pieces they have received on their game pad.
 IV.4.  Explain ratings
@@ -74,8 +74,8 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 VI.2.  Under the following terms:
 1\. Attribution - You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\
 2.\
-2.\
+2\.\
 2\) 2. ShareAlike - If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\
 3.\
-3.\
+3\.\
 3\) 3. No additional restrictions - You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
