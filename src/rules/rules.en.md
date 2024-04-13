@@ -30,6 +30,7 @@ Repeat the voting process with two face-up method cards. Choose the method card 
 End your company selection with a choice between two culture cards. The voting rules according to the mission cards apply. Choose the card that matches the organization, selection, mission and method cards.
 III.2.  Describe the company
 You have now put together a company. Tell each other exactly what it's like in this company.1) What are typical sayings?1) What are typical sayings?1) What are typical sayings?\
+You read the part out loud.1) What are typical sayings?\
    You read the part out loud. 2) How do employees often act?\
    Share these insights in the group (or thank the initiator). 3) What would be a total break with the corporate culture?
    Note your comments on the A4 sheet in the middle of the game table. This will serve as a reminder for subsequent events.
@@ -52,6 +53,7 @@ After all options for action have been presented, you evaluate them according to
 1\. You place your rocket on the action option that you consider to have the greatest leverage in response to the event.\
 2.\
 2\.\
+You read the part out loud.\
 You read the part out loud. You place the fish on the action option that most reminds you of an action you have already experienced.
 All game groups note the number of pieces they have received on their game pad.
 IV.4.  Explain ratings
@@ -75,7 +77,9 @@ VI.2.  Under the following terms:
 1\. Attribution - You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\
 2.\
 2\.\
+2\) 2.\
 2\) 2. ShareAlike - If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\
 3.\
 3\.\
+3\) 3.\
 3\) 3. No additional restrictions - You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
