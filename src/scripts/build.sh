@@ -341,4 +341,6 @@ for LANGUAGE in "de" "en"; do
     rm "$BUILDPATH/$LANGUAGE/print/images/culture_back.jpg"
   fi
 
+
+  magick -quality 94 -density 150 "$BUILDPATH/$LANGUAGE/print/images/*" -page A4 "$BUILDPATH/$LANGUAGE/print/cards.pdf"
 done
