@@ -29,7 +29,7 @@ Deckt dazu als nächstes zwei Missionskarten auf. Lest auch diese Karten vor. W�
 Wiederholt den Wahlvorgang mit zwei aufgedeckten Methodenkarten. Es ist die Methodenkarte zu wählen, die am Besten zum Set aus Organisations-, Auswahl- und Missionskarte passt.
 Beendet Eure Unternehmenswahl mit einem Wahlvorgang zwischen zwei Kulturkarten. Es gelten die Wahlregeln entsprechend der Missionskarten. Es ist diejenige Karte zu wählen, die stimmig zu der Organisations-, Auswahl-, Missions- und Methodenkarte passt.
 III.2.  Unternehmen beschreiben
-Ihr habt nun ein Unternehmen zusammengestellt. Erzählt Euch gegenseitig, wie es genau in diesem Unternehmen aussieht.1) Was sind typische Sprüche?1) Was sind typische Sprüche?1.1.1.1. Was sind typische Sprüche?
+Ihr habt nun ein Unternehmen zusammengestellt. Erzählt Euch gegenseitig, wie es genau in diesem Unternehmen aussieht.1) Was sind typische Sprüche?1) Was sind typische Sprüche?1.1.1.1.1. Was sind typische Sprüche?
 2. Wie handeln die Mitarbeiter und Mitarbeiterinnen häufig?3) 3) Wie handeln die Mitarbeiter und Mitarbeiterinnen häufig?3) 3) 3) Was wäre ein totaler Bruch der Unternehmenskultur?3) 3) Wie handeln die Mitarbeiter und Mitarbeiterinnen häufig?3) 3) Wie handeln die Mitarbeiter und Mitarbeiterinnen häufig?3) 3) 3) Was wäre ein totaler Bruch der Unternehmenskultur?3) 3) Wie handeln die Mitarbeiter und Mitarbeiterinnen häufig?3) 3) 3) Was wäre ein totaler Bruch der Unternehmenskultur?
       Notiert auf dem DinA4-Bogen in der Mitte des Spieltisches Eure Anmerkungen. Dies dient Eurer Erinnerung für die nachfolgenden Ereignisse.
 
@@ -51,6 +51,7 @@ Nachdem alle Handlungsoptionen vorgestellt wurden, bewertet Ihr diese nach folge
 1\. Ihr stellt Eure Rakete auf die Handlungsoption, die Ihr für den größten Hebel als Antwort auf das Ereignis haltet.\
 2.\
 2\.\
+2.\
 2.\
 2.\
 2.\
@@ -80,9 +81,11 @@ VI.2.  Under the following terms:
 2\) 2.\
 2\) 2.\
 2\) 2.\
+2\) 2.\
 2\) 2. ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\
 3.\
 3\.\
+3\) 3.\
 3\) 3.\
 3\) 3.\
 3\) 3.\
