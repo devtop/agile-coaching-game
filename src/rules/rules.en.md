@@ -34,6 +34,7 @@ You read the part out loud.1) What are typical sayings?\
 You read the part out loud.1) What are typical sayings?\
 You read the part out loud.1) What are typical sayings?\
 You read the part out loud.1) What are typical sayings?\
+You read the part out loud.1) What are typical sayings?\
    You read the part out loud. 2) How do employees often act?\
    Share these insights in the group (or thank the initiator). 3) What would be a total break with the corporate culture?
    Note your comments on the A4 sheet in the middle of the game table. This will serve as a reminder for subsequent events.
@@ -84,9 +85,11 @@ VI.2.  Under the following terms:
 2\) 2.\
 2\) 2.\
 2\) 2.\
+2\) 2.\
 2\) 2. ShareAlike - If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\
 3.\
 3\.\
+3\) 3.\
 3\) 3.\
 3\) 3.\
 3\) 3.\
