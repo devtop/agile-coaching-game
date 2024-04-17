@@ -1,34 +1,34 @@
 AGILE COACHING THE GAME
 
-I.  Objective of the game
-"Agile Coaching - the game" brings fun and managers (lateral, agile, becoming agile) and agile coaches into conversation. The aim is to expand your own skills in agile systems through the exchange of experience and inspiration.
-Using examples, the players discuss options for action in the respective system and evaluate them. The options for action should be worked out as specifically as possible.
-II. course of the game
+I.  Aim of the Game
+"Agile Coaching - the Game" is fun and encourages leaders (lateral, agile, becoming agile) and agile coaches to enter into conversation. The aim is to expand your own skills in agile systems through the exchange of experience and inspiration.
+On the basis of examples, the players discuss options for action in the respective system and evaluate them. The options for action should be worked out as specifically as possible.
+II. Course of the Game
 The game is played in five phases:
-1\. Prepare the game table
-2\. Company description
-3\. Select company
-4\. Clarify function
-5\. React to events
-6\. Feedback given
-II.1.  Prepare the game table
+1\. Preparing the Game Table
+2\. Describing the Company
+3\. Selecting the Company
+4\. Clarifying Function
+5\. Reacting to Events
+6\. Giving Feedback
+II.1.  Preparing the Game Table
 The game is played with a minimum of three and a maximum of eight participants.
-If more than four people are playing, some of them are playing in pairs, so that a total of four parties are playing. Single players and couples are now referred to as game groups.
-Each group receives the following materials:
+If more than four people are playing, some of them are playing in pairs, so that a total of four parties are playing. Single players and pairs are now referred to as subgroups.
+Each subgroup receives the following materials:
 \- 1 game pad
 \- 1 pen
 \- Game pieces of one color:
 ◦ 1 rocket
 ◦ 1 fish
-◦ One game piece (round) for each player
+◦ 1 game piece (round) for each player
 In the middle of the table, lay out all the cards as a face-down deck. This is also where you put the PostIt block.
-III. select company
-III.1.  Define company
-Reveals a selection card and an organization card. Read these out loud. It is now your task to construct a company that is as coherent as possible and fits well with the transition task described by the selection card.
-Next, reveal two mission cards. Also read these cards aloud. Now use your round token to select the mission that best matches the organization and selection card. If there is a tie, turn over another mission card, read it out and choose between the three cards. The card with the most votes will lead to the description of your company.
-Repeat the voting process with two face-up method cards. Choose the method card that best matches the set of organization, selection and mission cards.
-End your company selection with a choice between two culture cards. The voting rules according to the mission cards apply. Choose the card that matches the organization, selection, mission and method cards.
-III.2.  Describe the company
+III. Selecting the Company
+III.1.  Defining the Company
+Reveal a Selection card and an Organization card. Read these out loud. The task is now to construct a company that is as coherent as possible and fits well with the transition task described by the Selection card.
+Next, reveal two Mission cards. Read these cards aloud as well. Now use your round game piece to select the mission that best matches the Organization and Selection card. If there is a tie, turn over another Mission card, read it out and choose between the three cards. The card with the most votes will lead to the description of your company.
+Repeat the voting process with two Method cards. Choose the Method card that best matches the set of Organization, Selection and Mission cards.
+Finish your company selection with a choice between two Culture cards. The voting rules according to the Mission cards apply. Choose the card that matches the Organization, Selection, Mission and Method cards.
+III.2.  Describing the Company
 You have now put together a company. Tell each other exactly what it's like in this company.1) What are typical sayings?1) What are typical sayings?1) What are typical sayings?\
 You read the part out loud.1) What are typical sayings?\
 You read the part out loud.1) What are typical sayings?\
