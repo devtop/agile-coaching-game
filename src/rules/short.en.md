@@ -1,10 +1,10 @@
-Agile coaching - the game
+Agile Coaching - The Game
 
-Playgroup
-Form three or four playgroups of one or two people.
+Players
+Form three or four subgroups of one or two people.
 
 Preparation
-Each game group receives an evaluation pad, a pen, a fish, a rocket and a quick guide, each player receives a token.
+Each game group receives a rating pad, a pen, a fish, a rocket and a quick guide. Each player receives a round game piece.
 Place the large worksheet and PostIts in the middle of the table. For the company definition, you lay out stacks of cards face down: Organization, Selection, Mission, Methods and Culture cards. There are also face-down stacks of event and role cards. The function card is on the "You are the coach of the role" side.
 
 Define and describe the company
