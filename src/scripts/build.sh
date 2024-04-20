@@ -342,5 +342,137 @@ for LANGUAGE in "de" "en"; do
   fi
 
 
-  magick -quality 94 -density 150 "$BUILDPATH/$LANGUAGE/print/images/*" -page A4 "$BUILDPATH/$LANGUAGE/print/cards.pdf"
+# SELECTION
+  CATEGORY="$(cat "$SRCPATH/cards/selection/back.$LANGUAGE.md")"
+  CATEGORY="${CATEGORY^^}"
+  mkdir -p "$BUILDPATH/$LANGUAGE/images/cards/selection"
+
+  echo "Starting $LANGUAGE selection"
+
+  for file in src/cards/selection/[0-9][0-9].md; do
+    filename=$(basename -- "$file")
+    extension="${filename##*.}"
+    cardnumber="${filename%.*}"
+
+    TEXT="$(sed 's/&quot;/\"/g' < "$SRCPATH/cards/selection/$cardnumber.$LANGUAGE.md")"
+
+    magick "$SRCPATH/cards/selection/front.png" \
+     -pointsize 50 -fill "#666666" -font "build/static/OpenSans-SemiBold.ttf" -gravity North \
+     -draw "text 0,142 '$CATEGORY'" -draw "text 0,980 '$cardnumber'" \
+     -font "build/static/OpenSans-Regular.ttf" -background "#eeeeee" -size 556x \
+     caption:"$TEXT" -geometry +0+230 \
+    -composite "$BUILDPATH/$LANGUAGE/images/cards/selection/$cardnumber.png"
+  done
+
+  magick "$SRCPATH/cards/selection/back.png" \
+  -pointsize 100 -fill white -font "build/static/OpenSans-SemiBold.ttf" -gravity North -draw "text 0,150 '$CATEGORY'" \
+  "$BUILDPATH/$LANGUAGE/images/cards/selection/back.png"
+
+  magick montage -page A4 -density 300 -gravity North -rotate 90 \
+   "$BUILDPATH/$LANGUAGE/images/cards/selection/"[0-9][0-9].png \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/selection.jpg"
+ 
+  magick montage -page A4 -density 300 -gravity North -rotate 90 \
+  "$BUILDPATH/$LANGUAGE/images/cards/selection/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/selection/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/selection/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/selection/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/selection/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/selection/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/selection/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/selection/back.png" \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/selection_back.jpg"
+
+  FILES=$(ls "$BUILDPATH/$LANGUAGE/images/cards/selection/"[0-9][0-9].png | wc -l)
+  (( SHEETS = (FILES+7)/8 ))
+  if [ $SHEETS -gt 1 ]; then
+    for (( i=0; i<$SHEETS; i++ ))
+    do
+      cp "$BUILDPATH/$LANGUAGE/print/images/selection_back.jpg" "$BUILDPATH/$LANGUAGE/print/images/selection-$i""b.jpg"
+    done
+    rm "$BUILDPATH/$LANGUAGE/print/images/selection_back.jpg"
+  fi
+
+# ROLE
+  CATEGORY="$(cat "$SRCPATH/cards/role/back.$LANGUAGE.md")"
+  CATEGORY="${CATEGORY^^}"
+  mkdir -p "$BUILDPATH/$LANGUAGE/images/cards/role"
+
+  echo "Starting $LANGUAGE role"
+
+  for file in src/cards/role/[0-9][0-9].md; do
+    filename=$(basename -- "$file")
+    extension="${filename##*.}"
+    cardnumber="${filename%.*}"
+
+    TEXT="$(sed 's/&quot;/\"/g' < "$SRCPATH/cards/role/$cardnumber.$LANGUAGE.md")"
+
+    magick "$SRCPATH/cards/role/front.$cardnumber.png" \
+     -pointsize 50 -fill "#666666" -font "build/static/OpenSans-SemiBold.ttf" -gravity North \
+     -draw "text 0,142 '$CATEGORY'" -draw "text 0,980 '$cardnumber'" \
+     -font "build/static/OpenSans-Regular.ttf" -size 556x \
+     caption:"$TEXT" -geometry +0+230 \
+    -composite "$BUILDPATH/$LANGUAGE/images/cards/role/$cardnumber.png"
+  done
+
+  magick "$SRCPATH/cards/role/back.png" \
+  -pointsize 100 -fill white -font "build/static/OpenSans-SemiBold.ttf" -gravity North -draw "text 0,150 '$CATEGORY'" \
+  "$BUILDPATH/$LANGUAGE/images/cards/role/back.png"
+
+  magick montage -page A4 -density 300 -gravity North -rotate 90 \
+   "$BUILDPATH/$LANGUAGE/images/cards/role/"[0-9][0-9].png \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/role.jpg"
+ 
+  magick montage -page A4 -density 300 -gravity North -rotate 90 \
+  "$BUILDPATH/$LANGUAGE/images/cards/role/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/role/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/role/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/role/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/role/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/role/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/role/back.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/role/back.png" \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/role_back.jpg"
+
+  FILES=$(ls "$BUILDPATH/$LANGUAGE/images/cards/role/"[0-9][0-9].png | wc -l)
+  (( SHEETS = (FILES+7)/8 ))
+  if [ $SHEETS -gt 1 ]; then
+    for (( i=0; i<$SHEETS; i++ ))
+    do
+      cp "$BUILDPATH/$LANGUAGE/print/images/role_back.jpg" "$BUILDPATH/$LANGUAGE/print/images/role-$i""b.jpg"
+    done
+    rm "$BUILDPATH/$LANGUAGE/print/images/role_back.jpg"
+  fi
+
+# SPECIAL CARDS
+  echo "Starting $LANGUAGE special"
+
+  TEXT="$(sed 's/&quot;/\"/g' < "$SRCPATH/cards/role/flip_on.$LANGUAGE.md")"
+  magick "$SRCPATH/cards/role/flip.png" \
+    -pointsize 50 -fill black -font "build/static/OpenSans-SemiBold.ttf" -gravity North \
+    -font "build/static/OpenSans-Regular.ttf" -size 556x \
+    caption:"$TEXT" -geometry +0+230 \
+    -composite "$BUILDPATH/$LANGUAGE/images/cards/role/flip_on.png"
+
+  TEXT="$(sed 's/&quot;/\"/g' < "$SRCPATH/cards/role/flip_off.$LANGUAGE.md")"
+  magick "$SRCPATH/cards/role/flip.png" \
+    -pointsize 50 -fill black -font "build/static/OpenSans-SemiBold.ttf" -gravity North \
+    -font "build/static/OpenSans-Regular.ttf" -size 556x \
+    caption:"$TEXT" -geometry +0+230 \
+    -composite "$BUILDPATH/$LANGUAGE/images/cards/role/flip_off.png"
+
+  magick montage -page A4 -density 300 -gravity North -rotate 90 \
+    "$BUILDPATH/$LANGUAGE/images/cards/role/flip_on.png" \
+    "$BUILDPATH/$LANGUAGE/images/cards/role/flip_off.png" \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/speciall.jpg"
+
+  magick montage -page A4 -density 300 -gravity North -rotate 90 \
+  "$BUILDPATH/$LANGUAGE/images/cards/role/flip_on.png" \
+  "$BUILDPATH/$LANGUAGE/images/cards/role/flip_off.png" \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/special_back.jpg"
+
+
+# Print Sheets PDF
+  magick -quality 94 -density 300 "$BUILDPATH/$LANGUAGE/print/images/"* -page A4 "$BUILDPATH/$LANGUAGE/print/cards.pdf"
+  magick -quality 54 -density 96 "$BUILDPATH/$LANGUAGE/print/images/"* -page A4 "$BUILDPATH/$LANGUAGE/print/cards_compact.pdf"
 done
