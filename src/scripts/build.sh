@@ -461,16 +461,40 @@ for LANGUAGE in "de" "en"; do
     caption:"$TEXT" -geometry +0+230 \
     -composite "$BUILDPATH/$LANGUAGE/images/cards/role/flip_off.png"
 
-  magick montage -page A4 -density 300 -gravity North -rotate 90 \
-    "$BUILDPATH/$LANGUAGE/images/cards/role/flip_on.png" \
-    "$BUILDPATH/$LANGUAGE/images/cards/role/flip_off.png" \
-  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/speciall.jpg"
 
-  magick montage -page A4 -density 300 -gravity North -rotate 90 \
-  "$BUILDPATH/$LANGUAGE/images/cards/role/flip_on.png" \
-  "$BUILDPATH/$LANGUAGE/images/cards/role/flip_off.png" \
+  mkdir -p "$BUILDPATH/$LANGUAGE/images/cards/credits"
+  CATEGORY="$(sed 's/&quot;/\"/g' < "$SRCPATH/cards/credits/credits.$LANGUAGE.md")"
+  CATEGORY="${CATEGORY^^}"
+  magick "$SRCPATH/cards/credits/back.png" \
+  -pointsize 100 -fill white -font "build/static/OpenSans-SemiBold.ttf" -gravity North -draw "text 0,150 '$CATEGORY'" \
+  "$BUILDPATH/$LANGUAGE/images/cards/credits/back.png"
+
+  TITLES="$(sed 's/&quot;/\"/g' < "$SRCPATH/cards/credits/titles.$LANGUAGE.md")"
+  PERSONS="$(sed 's/&quot;/\"/g' < "$SRCPATH/cards/credits/persons.$LANGUAGE.md")"
+
+  #magick "src/cards/credits/front.png"     -pointsize 50 -fill white -font "build/static/OpenSans-SemiBold.ttf" -draw "text 130,180 'MITWIRKENDE'" 
+  #-pointsize 40 -fill black -gravity Northwest -font "build/static/OpenSans-Regular.ttf" -size 450x     caption:"Autorin\nProduktion\nÜbersetzung\nErzählungen" -geometry +600+220 -composite 
+  #-gravity Northeast -font "build/static/OpenSans-SemiBold.ttf" -size 450x     caption:"Autorin\nProduktion\nÜbersetzung\nErzählungen" -geometry +600+220    -composite "build/test.png"
+
+  magick "$SRCPATH/cards/credits/front.png" \
+    -pointsize 50 -fill white -font "build/static/OpenSans-SemiBold.ttf" \
+    -draw "text 130,180 '$CATEGORY'" \
+    -fill black -pointsize 40 -gravity Northwest -font "build/static/OpenSans-Regular.ttf" -size 450x \
+    caption:"$TITLES" -geometry +600+220 -composite \
+    -gravity Northeast -font "build/static/OpenSans-Semibold.ttf" -size 450x \
+    caption:"$PERSONS" -geometry +600+220 -composite \
+    "$BUILDPATH/$LANGUAGE/images/cards/credits/front.png"
+
+
+  magick montage -page A4 -density 300 -gravity North -reverse \
+    "$BUILDPATH/$LANGUAGE/images/cards/credits/front.png" \
+    -rotate 90 "$BUILDPATH/$LANGUAGE/images/cards/role/flip_on.png" \
+  -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/special.jpg"
+
+  magick montage -page A4 -density 300 -gravity North \
+  "$BUILDPATH/$LANGUAGE/images/cards/credits/back.png" \
+  -rotate 90 "$BUILDPATH/$LANGUAGE/images/cards/role/flip_off.png" \
   -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/special_back.jpg"
-
 
 # Print Sheets PDF
   magick -quality 94 -density 300 "$BUILDPATH/$LANGUAGE/print/images/"* -page A4 "$BUILDPATH/$LANGUAGE/print/cards.pdf"
