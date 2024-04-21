@@ -523,14 +523,16 @@ for LANGUAGE in "de" "en"; do
     "$BUILDPATH/$LANGUAGE/images/rules/short.front.02.png" \
     "$BUILDPATH/$LANGUAGE/images/rules/short.front.03.png" \
     "$BUILDPATH/$LANGUAGE/images/rules/short.front.04.png" \
-    -tile 2x2 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/shortrules_front.jpg"
+    -tile 2x2 -geometry +2+2 -background white -extent 1274x \
+    "$BUILDPATH/$LANGUAGE/print/images/shortrules_front.jpg"
 
   magick montage -page A4 -density 300 -gravity North \
     "$BUILDPATH/$LANGUAGE/images/rules/short.back.02.png" \
     "$BUILDPATH/$LANGUAGE/images/rules/short.back.01.png" \
     "$BUILDPATH/$LANGUAGE/images/rules/short.back.04.png" \
     "$BUILDPATH/$LANGUAGE/images/rules/short.back.03.png" \
-    -tile 2x2 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/shortrules_back.jpg"
+    -tile 2x2 -geometry +2+2 -background white -extent 1274x \
+    "$BUILDPATH/$LANGUAGE/print/images/shortrules_back.jpg"
   
 
 # Print Sheets PDF
