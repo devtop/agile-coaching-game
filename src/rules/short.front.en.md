@@ -1,6 +1,6 @@
-Spielgruppe
-Bildet drei oder vier Spielgruppen aus einer oder zwei Personen.
+Players
+Form three or four subgroups of one or two people.
 
-Vorbereitung
-Jede Spielgruppe erhält einen Auswertungsblock, einen Stift, einen Fisch, eine Rakete und eine Kurzanleitung, Jeder Spieler und jede Spielerin erhält einen Spielstein.
-In die Tischmitte legt Ihr den großen Arbeitsbogen und PostIts. Für die Unternehmensdefinition legt Ihr verdeckt Kartenstapel aus: Organisations-, Auswahl-, Mission-, Methoden- und Kulturkarten. Dazu kommen verdeckte Stapel der Ereignis- und Rollenkarten. Die Funktionskarte liegt auf der "Du bist Coach der Rolle"-Seite.
+Preparation
+Each subgroup receives a rating pad, a pen, a fish, a rocket and a quick guide. Each player receives a round game piece.
+Place the large worksheet and sticky cards in the middle of the table. For the company definition, lay out stacks of cards face down: Organization, Selection, Mission, Methods and Culture cards. There are also face-down stacks of Event and Role cards. The function card is on the "You are the coach of the role" side.
