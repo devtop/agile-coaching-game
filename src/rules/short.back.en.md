@@ -1,13 +1,13 @@
-Unternehmen definieren und beschreiben
-Deckt eine Auswahl- und eine Organisationskarte auf. Wählt nun aus zwei Missionskarten mit den Spielsteinen eine passende Missionskarte. Wiederholt den Vorgang bei der Wahl der Methoden- und Kulturkarte. Bei Gleichstand in der Wahl deckt jeweils eine dritte Karte auf und wählt erneut. Erzählt zusammen Geschichten über das definierte Unternehmen und macht auf dem Arbeitspapier in der Tischmitte Notizen dazu.
+Defining and Describing the Company
+Reveil a Selection card and an Organization card. Now choose a matching Mission card from two Mission cards with help of the game pieces. Repeat the process when choosing the Method and Culture card. If there is a tie, the player turns over a third card and chooses again. Tell stories together about the defined company and make notes on the working paper in the middle of the table.
 
-Auf Ereignis reagieren (5X)
-Zieht eine Rolle und ein Ereignis. Lest Euch die Karten vor. Verständigt Euch, wie diese Karten für Euer Unternehmen zu interpretieren sind.
-Ihr beginnt mit der Funktion "Ihr seid Coach der Rolle".
-Notiert auf Eurem Schreibblock eine Maßnahme oder ein Vorgehen mit dem größten Hebel für diese Rolle und das Ereignis. Tragt Euch diese Maßnahmen vor.
-Bewertet die Maßnahmen mit einer Rakete (für den größten Hebel) und mit einem Fisch (diese Maßnahme war dem ähnlichsten, was Ihr bereits einmal erlebt habt).
-Erläutert Euch gegenseitig Eure Fische + Raketen (notiert die erhaltenen Anzahlen auf Eurem Schreibblock).
-Verständigt Euch im Konsent, ob Ihr für die nächste Runde die Rollen- oder die Ereigniskarte austauschen möchtet. Jetzt könnt Ihr auch die Funktion der Rolle wechseln. Deckt die entsprechende Seite der Funktionskarte auf.
+React to event (5X)
+Draw a role and an event. Read the cards to the group. Agree on how these cards are to be interpreted for your company.
+Start with the function "You are the coach of the role".
+On your rating pad, write down an action or procedure with the greatest leverage for this role and event. Present these measures to each other.
+Rate the measures with a rocket (for the greatest leverage) and with a fish (this measure was the most similar to what you have already experienced).
+Explain your fish + rockets to each other (note the numbers you have received on your rating pad).
+Agree by consensus whether you want to swap the Role card or the Event card for the next round. Now you can also change the function of the role. Reveal the corresponding side of the function card.
 
-Feedback geben
-Gebt Euch nach fünf Runden allgemeines Feedback.
+Giving Feedback
+Give general feedback after five rounds.
