@@ -1,1 +1,1 @@
-Agile Coaching - das Spiel (Basisregeln)
+Agile Coaching - The Game (basic rules)
