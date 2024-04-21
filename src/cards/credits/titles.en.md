@@ -1,4 +1,4 @@
-Author, texts, images
-Programming, production
-Translation
-Stories, motivation, proofreading
+Authorin, Texte, Bilder
+Programmierung, Produktion
+Übersetzung
+Erzählungen, Motivation, Korrektur
