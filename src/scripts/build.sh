@@ -496,9 +496,46 @@ for LANGUAGE in "de" "en"; do
   -rotate 90 "$BUILDPATH/$LANGUAGE/images/cards/role/flip_off.png" \
   -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/special_back.jpg"
 
+ #  magick "src/rules/short.front.01.png"     -pointsize 60 -fill black -font "build/static/OpenSans-SemiBold.ttf" 
+ # -size 800x caption:"AGILE COACHING - DAS SPIEL (BASISREGELN)" -geometry +130+130 -composite -pointsize 30 -gravity Northwest -font "build/static/OpenSans-Regular.ttf" 
+ # -size 900x caption:"Spielgruppe\nBildet drei oder vier Spielgruppen aus einer oder zwei Personen.\n\nVorbereitung\nJede Spielgruppe erhält einen Auswertungsblock, einen Stift, einen Fisch, eine Rakete und eine Kurzanleitung, Jeder Spieler und jede Spielerin erhält einen Spielstein.\nIn die Tischmitte legt Ihr den großen Arbeitsbogen und PostIts. Für die Unternehmensdefinition legt Ihr verdeckt Kartenstapel aus: Organisations-, Auswahl-, Mission-, Methoden- und Kulturkarten. Dazu kommen verdeckte Stapel der Ereignis- und Rollenkarten. Die Funktionskarte liegt auf der \"Du bist Coach der Rolle\"-Seite."
+ # -geometry +130+360 -composite     "build/test.png"
+  TITLE="$(sed 's/&quot;/\"/g' < "$SRCPATH/rules/short.title.$LANGUAGE.md")"
+  TITLE="${TITLE^^}"
+  TEXT="$(sed 's/&quot;/\"/g' < "$SRCPATH/rules/short.front.$LANGUAGE.md")"
+  TEXTBACK="$(sed 's/&quot;/\"/g' < "$SRCPATH/rules/short.back.$LANGUAGE.md")"
+ 
+  mkdir -p "$BUILDPATH/$LANGUAGE/images/rules"
+ 
+  for COLOR in "01" "02" "03" "04"; do
+    magick "$SRCPATH/rules/short.front.$COLOR.png" \
+      -pointsize 60 -fill black -font "build/static/OpenSans-SemiBold.ttf" -size 800x caption:"$TITLE" -geometry +130+130 -composite \
+      -font "build/static/OpenSans-Regular.ttf" -pointsize 30 -size 900x caption:"$TEXT" -geometry +130+360 -composite \
+      "$BUILDPATH/$LANGUAGE/images/rules/short.front.$COLOR.png"
+
+    magick "$SRCPATH/rules/short.back.$COLOR.png" -fill black \
+      -font "build/static/OpenSans-Regular.ttf" -pointsize 30 -size 900x caption:"$TEXTBACK" -geometry +130+360 -composite \
+      "$BUILDPATH/$LANGUAGE/images/rules/short.back.$COLOR.png"
+  done
+
+  magick montage -page A4 -density 300 -gravity North \
+    "$BUILDPATH/$LANGUAGE/images/rules/short.front.01.png" \
+    "$BUILDPATH/$LANGUAGE/images/rules/short.front.02.png" \
+    "$BUILDPATH/$LANGUAGE/images/rules/short.front.03.png" \
+    "$BUILDPATH/$LANGUAGE/images/rules/short.front.04.png" \
+    -tile 2x2 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/shortrules_front.jpg"
+
+  magick montage -page A4 -density 300 -gravity North \
+    "$BUILDPATH/$LANGUAGE/images/rules/short.back.02.png" \
+    "$BUILDPATH/$LANGUAGE/images/rules/short.back.01.png" \
+    "$BUILDPATH/$LANGUAGE/images/rules/short.back.04.png" \
+    "$BUILDPATH/$LANGUAGE/images/rules/short.back.03.png" \
+    -tile 2x2 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/shortrules_back.jpg"
+  
+
 # Print Sheets PDF
-  magick -quality 94 -density 300 "$BUILDPATH/$LANGUAGE/print/images/"* -page A4 "$BUILDPATH/$LANGUAGE/print/cards.pdf"
-  magick -quality 54 -density 96 "$BUILDPATH/$LANGUAGE/print/images/"* -page A4 "$BUILDPATH/$LANGUAGE/print/cards_compact.pdf"
+  magick -quality 94 -density 300 "$BUILDPATH/$LANGUAGE/print/images/"*.jpg -page A4 "$BUILDPATH/$LANGUAGE/print/cards.pdf"
+  magick -quality 50 -density 77 "$BUILDPATH/$LANGUAGE/print/images/"*.jpg -page A4 "$BUILDPATH/$LANGUAGE/print/cards_compact.pdf"
 
   /C/Program\ Files/LibreOffice/program/soffice --headless --convert-to pdf "$SRCPATH/rules/Anleitung.$LANGUAGE.odt" --outdir "$BUILDPATH/print/"
   
