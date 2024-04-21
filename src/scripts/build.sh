@@ -499,4 +499,7 @@ for LANGUAGE in "de" "en"; do
 # Print Sheets PDF
   magick -quality 94 -density 300 "$BUILDPATH/$LANGUAGE/print/images/"* -page A4 "$BUILDPATH/$LANGUAGE/print/cards.pdf"
   magick -quality 54 -density 96 "$BUILDPATH/$LANGUAGE/print/images/"* -page A4 "$BUILDPATH/$LANGUAGE/print/cards_compact.pdf"
+
+  /C/Program\ Files/LibreOffice/program/soffice --headless --convert-to pdf "$SRCPATH/rules/Anleitung.$LANGUAGE.odt" --outdir "$BUILDPATH/print/"
+  
 done
