@@ -1,1 +1,1 @@
-Ihr seid agile_r Coach_in der Rolle
+You are the agile coach for this role
