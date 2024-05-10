@@ -1,1 +1,1 @@
-You are the agile coach for this role
+You are the Agile Coach for this role
