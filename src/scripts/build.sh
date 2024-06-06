@@ -372,7 +372,7 @@ for LANGUAGE in "de" "en"; do
    "$BUILDPATH/$LANGUAGE/images/cards/selection/"[0-9][0-9].png \
   -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/selection.jpg"
  
-  magick montage -page A4 -density 300 -gravity North -rotate 90 \
+  magick montage -page A4 -density 300 -gravity North -rotate 270 \
   "$BUILDPATH/$LANGUAGE/images/cards/selection/back.png" \
   "$BUILDPATH/$LANGUAGE/images/cards/selection/back.png" \
   "$BUILDPATH/$LANGUAGE/images/cards/selection/back.png" \
@@ -423,7 +423,7 @@ for LANGUAGE in "de" "en"; do
    "$BUILDPATH/$LANGUAGE/images/cards/role/"[0-9][0-9].png \
   -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/role.jpg"
  
-  magick montage -page A4 -density 300 -gravity North -rotate 90 \
+  magick montage -page A4 -density 300 -gravity North -rotate 270 \
   "$BUILDPATH/$LANGUAGE/images/cards/role/back.png" \
   "$BUILDPATH/$LANGUAGE/images/cards/role/back.png" \
   "$BUILDPATH/$LANGUAGE/images/cards/role/back.png" \
@@ -493,7 +493,7 @@ for LANGUAGE in "de" "en"; do
 
   magick montage -page A4 -density 300 -gravity North \
   "$BUILDPATH/$LANGUAGE/images/cards/credits/back.png" \
-  -rotate 90 "$BUILDPATH/$LANGUAGE/images/cards/role/flip_off.png" \
+  -rotate 270 "$BUILDPATH/$LANGUAGE/images/cards/role/flip_off.png" \
   -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/special_back.jpg"
 
  #  magick "src/rules/short.front.01.png"     -pointsize 60 -fill black -font "build/static/OpenSans-SemiBold.ttf" 
