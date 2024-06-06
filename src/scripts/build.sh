@@ -539,6 +539,8 @@ for LANGUAGE in "de" "en"; do
   magick -quality 94 -density 300 "$BUILDPATH/$LANGUAGE/print/images/"*.jpg -page A4 "$BUILDPATH/$LANGUAGE/print/cards.pdf"
   magick -quality 50 -density 77 "$BUILDPATH/$LANGUAGE/print/images/"*.jpg -page A4 "$BUILDPATH/$LANGUAGE/print/cards_compact.pdf"
 
-  /C/Program\ Files/LibreOffice/program/soffice --headless --convert-to pdf "$SRCPATH/rules/Anleitung.$LANGUAGE.odt" --outdir "$BUILDPATH/print/"
+  /C/Program\ Files/LibreOffice/program/soffice --headless --convert-to pdf "$SRCPATH/rules/Anleitung.$LANGUAGE.odt" --outdir "$BUILDPATH/$LANGUAGE/print/rules.pdf"
+
+  cp "$SRCPATH/tokens/tokens_diy.pdf" "$BUILDPATH/$LANGUAGE/print/"
   
 done
