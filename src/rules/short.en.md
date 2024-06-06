@@ -5,7 +5,7 @@ Form three or four subgroups of one or two people.
 
 Preparation
 Each subgroup receives a gaming pad, a pen, a fish, a rocket and a quick guide. Each player receives a round game piece.
-Place the large worksheet and sticky notes in the middle of the table. For the company definition, lay out decks of cards face down: Organization, Selection, Mission, Methods and Culture cards. There are also face down decks of Event and Role cards. The Function card displays "You are the coach of the role".
+Place the large worksheet and sticky notes in the middle of the table. For the company definition, lay out decks of cards face down: Organization, Selection, Mission, Method and Culture cards. There are also face down decks of Event and Role cards. The Function card displays "You are the coach of the role".
 
 Defining and Describing the Company
 Reveal one Selection card and one Organization card. Now choose a suitable mission from two Mission cards with help of the game pieces. Repeat the process for selecting the Method and Culture cards. In case of a tie, turn over a third card and choose again. Together, create and tell stories about the defined company and make notes on the work paper in the center of the table.
