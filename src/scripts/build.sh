@@ -14,6 +14,9 @@ BUILDPATH="$ROOTPATH/build"
 
 cd "$ROOTPATH"
 
+# Merge text
+"$SCRIPT_PATH/mergeText.sh"
+
 for LANGUAGE in "de" "en"; do
 
   # EVENTS
@@ -539,8 +542,26 @@ for LANGUAGE in "de" "en"; do
   magick -quality 94 -density 300 "$BUILDPATH/$LANGUAGE/print/images/"*.jpg -page A4 "$BUILDPATH/$LANGUAGE/print/cards.pdf"
   magick -quality 50 -density 77 "$BUILDPATH/$LANGUAGE/print/images/"*.jpg -page A4 "$BUILDPATH/$LANGUAGE/print/cards_compact.pdf"
 
-  /C/Program\ Files/LibreOffice/program/soffice --headless --convert-to pdf "$SRCPATH/rules/Anleitung.$LANGUAGE.odt" --outdir "$BUILDPATH/$LANGUAGE/print/rules.pdf"
+  /C/Program\ Files/LibreOffice/program/soffice --headless --convert-to pdf "$SRCPATH/rules/Anleitung.$LANGUAGE.odt" --outdir "$BUILDPATH/$LANGUAGE/print/"
+  mv "$BUILDPATH/$LANGUAGE/print/Anleitung.$LANGUAGE.pdf" "$BUILDPATH/$LANGUAGE/print/rules.pdf"
 
+# Packages
   cp "$SRCPATH/tokens/tokens_diy.pdf" "$BUILDPATH/$LANGUAGE/print/"
-  
+  rm "$BUILDPATH/print_diy.$LANGUAGE.zip"
+  zip -j "$BUILDPATH/print_diy.$LANGUAGE.zip" \
+    "$BUILDPATH/$LANGUAGE/print/rules.pdf" \
+    "$BUILDPATH/$LANGUAGE/print/cards.pdf" \
+    "$BUILDPATH/$LANGUAGE/print/tokens_diy.pdf"
+  rm "$BUILDPATH/print_mail.$LANGUAGE.zip"
+  zip -j "$BUILDPATH/print_mail.$LANGUAGE.zip" \
+    "$BUILDPATH/$LANGUAGE/print/rules.pdf" \
+    "$BUILDPATH/$LANGUAGE/print/cards_compact.pdf" \
+    "$BUILDPATH/$LANGUAGE/print/tokens_diy.pdf" \
+    "$BUILDPATH/textmerge.de.txt" \
+    "$BUILDPATH/textmerge.en.txt"
+
+  rm "$BUILDPATH/all.$LANGUAGE.zip"
+  zip "$BUILDPATH/all.$LANGUAGE.zip" \
+    "build/$LANGUAGE"
+
 done

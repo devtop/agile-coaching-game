@@ -25,6 +25,6 @@ for LANGUAGE in "de" "en"; do
     src/cards/selection/*.$LANGUAGE.md \
     src/cards/role/*.$LANGUAGE.md \
     src/cards/event/*.$LANGUAGE.md \
-    > "$BUILDPATH/texts.$LANGUAGE.txt"
+    > "$BUILDPATH/textmerge.$LANGUAGE.txt"
 
 done 
