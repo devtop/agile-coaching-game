@@ -538,14 +538,16 @@ for LANGUAGE in "de" "en"; do
     "$BUILDPATH/$LANGUAGE/print/images/shortrules_back.jpg"
   
 
-# Print Sheets PDF
-  magick -quality 94 -density 300 "$BUILDPATH/$LANGUAGE/print/images/"*.jpg -page A4 "$BUILDPATH/$LANGUAGE/print/cards.pdf"
-  magick -quality 50 -density 77 "$BUILDPATH/$LANGUAGE/print/images/"*.jpg -page A4 "$BUILDPATH/$LANGUAGE/print/cards_compact.pdf"
-
+  # Anleitung
   /C/Program\ Files/LibreOffice/program/soffice --headless --convert-to pdf "$SRCPATH/rules/Anleitung.$LANGUAGE.odt" --outdir "$BUILDPATH/$LANGUAGE/print/"
   mv "$BUILDPATH/$LANGUAGE/print/Anleitung.$LANGUAGE.pdf" "$BUILDPATH/$LANGUAGE/print/rules.pdf"
+  echo -n .
 
 done
+
+# Build diy pdfs
+"$SCRIPT_PATH/diy_pdfs.sh"
+
 
 # Build print card pdfs fpr professional print
 "$SCRIPT_PATH/professionalprintcards_1.sh"
