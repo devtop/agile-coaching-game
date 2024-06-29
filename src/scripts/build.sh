@@ -547,5 +547,9 @@ for LANGUAGE in "de" "en"; do
 
 done
 
+# Build print card pdfs fpr professional print
+"$SCRIPT_PATH/professionalprintcards_1.sh"
+"$SCRIPT_PATH/professionalprintcards_2.sh"
+
 # Build packages
 "$SCRIPT_PATH/packages.sh"
