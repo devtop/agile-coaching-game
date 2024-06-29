@@ -52,7 +52,7 @@ for LANGUAGE in "de" "en"; do
     done
 
     magick "$SRCPATH/cards/event/back.png" \
-    -pointsize 100 -fill "#ADADAD" -font "build/static/OpenSans-SemiBold.ttf" -draw "text 220,300 '$CATEGORY'" \
+    -pointsize 100 -fill "#ADADAD" -font "$ROOTPATH/ext/static/OpenSans-SemiBold.ttf" -draw "text 220,300 '$CATEGORY'" \
     "$BUILDPATH/$LANGUAGE/images/cards/event/back.png"
     echo -n .
         
