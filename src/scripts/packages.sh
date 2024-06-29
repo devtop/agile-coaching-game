@@ -36,6 +36,12 @@ for LANGUAGE in "de" "en"; do
         "$BUILDPATH/textmerge.de.txt" \
         "$BUILDPATH/textmerge.en.txt"
     echo -n .
+    zip -j "$BUILDPATH/professional_print.$LANGUAGE.zip" \
+        "$BUILDPATH/$LANGUAGE/print/pdf/cards_1.front.pdf" \
+        "$BUILDPATH/$LANGUAGE/print/pdf/cards_1.back.pdf" \
+        "$BUILDPATH/$LANGUAGE/print/pdf/cards_2.front.pdf" \
+        "$BUILDPATH/$LANGUAGE/print/pdf/cards_2.back.pdf" 
+    echo -n .
 
     rm "$BUILDPATH/all.$LANGUAGE.zip"
     echo -n .
