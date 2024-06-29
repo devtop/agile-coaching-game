@@ -16,20 +16,19 @@ cd "$ROOTPATH"
 
 for LANGUAGE in "de" "en"; do
 
-    # EVENTS
-    CATEGORY="$(cat "$SRCPATH/cards/event/back.$LANGUAGE.md")"
+    CATEGORY="$(cat "$SRCPATH/cards/method/back.$LANGUAGE.md")"
     CATEGORY="${CATEGORY^^}"
-    mkdir -p "$BUILDPATH/$LANGUAGE/images/cards/event"
+    mkdir -p "$BUILDPATH/$LANGUAGE/images/cards/method"
 
-    echo "Start build event cards $LANGUAGE "
+    echo "Start build method cards $LANGUAGE "
 
-    for file in src/cards/event/[0-9][0-9].md; do
+    for file in src/cards/method/[0-9][0-9].md; do
         filename=$(basename -- "$file")
         extension="${filename##*.}"
         cardnumber="${filename%.*}"
         #TEXT="$(cat "$SRCPATH/cards/event/$cardnumber.$LANGUAGE.md")"
-        TEXT="$(sed 's/&quot;/\"/g' < "$SRCPATH/cards/event/$cardnumber.$LANGUAGE.md")"
-        WC="$(wc -m < "$SRCPATH/cards/event/$cardnumber.$LANGUAGE.md")"
+        TEXT="$(sed 's/&quot;/\"/g' < "$SRCPATH/cards/method/$cardnumber.$LANGUAGE.md")"
+        WC="$(wc -m < "$SRCPATH/cards/method/$cardnumber.$LANGUAGE.md")"
         echo "$cardnumber: $WC"
         FONTSIZE=28
 
@@ -41,19 +40,18 @@ for LANGUAGE in "de" "en"; do
         fi
 
         FONTSIZE=$(($FONTSIZE+8))
-        magick "$SRCPATH/cards/event/front.png" \
-        -pointsize 50 -fill "#ADADAD" -font "$ROOTPATH/ext/static/OpenSans-SemiBold.ttf" -draw "text 130,180 '$CATEGORY'" \
+        magick "$SRCPATH/cards/method/front.png" \
+        -pointsize 50 -fill white -font "$ROOTPATH/ext/static/OpenSans-SemiBold.ttf" -draw "text 130,180 '$CATEGORY'" \
         -pointsize 30 -font "$ROOTPATH/ext/static/OpenSans-Regular.ttf" -draw "text 1040,190 '$cardnumber'" \
         -fill black -size 930x -pointsize $FONTSIZE caption:"$TEXT" -geometry +120+220\
-        -composite "$BUILDPATH/$LANGUAGE/images/cards/event/$cardnumber.png"
-
+        -composite "$BUILDPATH/$LANGUAGE/images/cards/method/$cardnumber.png"
     #  -fill black -size 910x pango:"<span font_family=\"Open Sans\" font=\"$FONTSIZE\">$TEXT</span>" -geometry +130+230 \
         #+antialias
     done
 
-    magick "$SRCPATH/cards/event/back.png" \
-    -pointsize 100 -fill "#ADADAD" -font "build/static/OpenSans-SemiBold.ttf" -draw "text 220,300 '$CATEGORY'" \
-    "$BUILDPATH/$LANGUAGE/images/cards/event/back.png"
+    magick "$SRCPATH/cards/method/back.png" \
+    -pointsize 100 -fill white -font "build/static/OpenSans-SemiBold.ttf" -draw "text 220,300 '$CATEGORY'" \
+    "$BUILDPATH/$LANGUAGE/images/cards/method/back.png"
     echo -n .
         
     echo " "

@@ -20,9 +20,12 @@ cd "$ROOTPATH"
 # EVENTS
 "$SCRIPT_PATH/cards/event.sh"
 
+# METHODSS
+"$SCRIPT_PATH/cards/method.sh"
 
 for LANGUAGE in "de" "en"; do
  
+# diy print event imagas
   mkdir -p "$BUILDPATH/$LANGUAGE/print/images/"
 
   magick montage -page A4 -density 300 -gravity north-west \
@@ -51,43 +54,6 @@ for LANGUAGE in "de" "en"; do
   fi
 
   # METHODS
-  CATEGORY="$(cat "$SRCPATH/cards/method/back.$LANGUAGE.md")"
-  CATEGORY="${CATEGORY^^}"
-  mkdir -p "$BUILDPATH/$LANGUAGE/images/cards/method"
-
-  echo "Starting $LANGUAGE methods"
-
-  for file in src/cards/method/[0-9][0-9].md; do
-    filename=$(basename -- "$file")
-    extension="${filename##*.}"
-    cardnumber="${filename%.*}"
-    #TEXT="$(cat "$SRCPATH/cards/event/$cardnumber.$LANGUAGE.md")"
-    TEXT="$(sed 's/&quot;/\"/g' < "$SRCPATH/cards/method/$cardnumber.$LANGUAGE.md")"
-    WC="$(wc -m < "$SRCPATH/cards/method/$cardnumber.$LANGUAGE.md")"
-    echo "$cardnumber: $WC"
-    FONTSIZE=28
-
-    if [ $WC -gt 266 ]; then
-      FONTSIZE=24
-    fi
-    if [ $WC -gt 350 ]; then
-      FONTSIZE=22
-    fi
-
-    FONTSIZE=$(($FONTSIZE+8))
-    magick "$SRCPATH/cards/method/front.png" \
-    -pointsize 50 -fill white -font "build/static/OpenSans-SemiBold.ttf" -draw "text 130,180 '$CATEGORY'" \
-    -pointsize 40 -font "build/static/OpenSans-Regular.ttf" -draw "text 1020,100 '$cardnumber'" \
-    -fill black -size 930x -pointsize $FONTSIZE caption:"$TEXT" -geometry +120+220\
-    -composite "$BUILDPATH/$LANGUAGE/images/cards/method/$cardnumber.png"
-  #  -fill black -size 910x pango:"<span font_family=\"Open Sans\" font=\"$FONTSIZE\">$TEXT</span>" -geometry +130+230 \
-    #+antialias
-  done
-
-  magick "$SRCPATH/cards/method/back.png" \
-  -pointsize 100 -fill white -font "build/static/OpenSans-SemiBold.ttf" -draw "text 220,300 '$CATEGORY'" \
-  "$BUILDPATH/$LANGUAGE/images/cards/method/back.png"
-
   magick montage -page A4 -density 300 -gravity north-west \
    "$BUILDPATH/$LANGUAGE/images/cards/method/"[0-9][0-9].png \
   -tile 2x4 -geometry +2+2 "$BUILDPATH/$LANGUAGE/print/images/method.jpg"
