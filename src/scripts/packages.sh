@@ -45,7 +45,7 @@ for LANGUAGE in "de" "en"; do
 
     rm "$BUILDPATH/all.$LANGUAGE.zip"
     echo -n .
-    zip "$BUILDPATH/all.$LANGUAGE.zip" \
-        "build/$LANGUAGE"
+    zip -r "$BUILDPATH/all.$LANGUAGE.zip" \
+        "build/$LANGUAGE/"
     echo .
 done
